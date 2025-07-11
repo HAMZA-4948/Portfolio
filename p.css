@@ -1117,7 +1117,7 @@ font-style: normal;
 {
     width: 100%;
     max-height: 100%;
-    padding: 10px 10px;
+    padding: 20px 10px;
     box-sizing: border-box;
 }
 .about-me-container
@@ -1132,7 +1132,7 @@ font-style: normal;
     font-size: 40px;
     margin-top: 100px;
     display: flex;
-    padding-top: 20px;
+    padding-top: 30px;
     flex-direction: row;
     justify-content: center;
     
@@ -1199,6 +1199,90 @@ font-style: normal;
         
         font-size: 15px;
     }
+    .circle-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-height: 100vh;
+}
+.original-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+   
+
+}
+.circle-middle,
+.circle-left,
+.circle-right {
+  width:65vw !important;
+  height: 220px !important;
+ 
+  border:1px solid #444444 !important;
+  border-radius: 20px !important;
+  margin: 10px auto !important;
+  transition: all 0.4s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  overflow-x: hidden;
+  padding: auto;
+}
+
+/* On hover or tap, make it look more like a card */
+.circle-middle:hover,
+.circle-left:hover,
+.circle-right:hover,
+.circle-middle:active,
+.circle-left:active,
+.circle-right:active {
+  border-radius: 10px !important;
+  width: 65vw !important;
+  max-width: 65vw !important;
+  box-shadow: 0 4px 14px 4px rgb(88, 88, 88);
+  background: #111;
+  z-index: 2;
+  margin: 10px 0 !important;
+  transform: none !important;
+  
+}
+
+.circle-middle:hover .original-content,
+.circle-left:hover .original-content,
+.circle-right:hover .original-content,
+.circle-middle:active .original-content,
+.circle-left:active .original-content,
+.circle-right:active .original-content {
+  display: none !important;
+}
+
+/* Make sure content is centered and readable */
+ .hover-content {
+  font-size: 15px !important;
+  display: flex;
+  text-align: justify !important;
+  transform: none !important;
+  color: #fff;
+  padding: 10px auto 10px auto;
+}
+
+  .circle-middle::before,
+  .circle-middle::after,
+  .circle-left::before,
+  .circle-left::after,
+  .circle-right::before,
+  .circle-right::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+  }
+
+
+
 }
   /* === Responsive: Tablets and below === */
 @media (max-width: 1024px) {
@@ -1213,5 +1297,3 @@ font-style: normal;
   
    
   }
-  
-  
